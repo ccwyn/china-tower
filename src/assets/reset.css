@@ -23,6 +23,7 @@ time, mark, audio, video, input{
   vertical-align: baseline;
   outline: none;
   -webkit-appearance: none;
+  font-family: PingFang SC;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -57,7 +58,7 @@ table{
 /* custom */
 
 a {
-  color: #7e8c8d;
+  color: #333;
   -webkit-backface-visibility: hidden;
   text-decoration: none;
 }

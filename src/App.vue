@@ -1,15 +1,6 @@
 <template>
   <div id="app">
-    <header>
-      <div class="content">
-        <img src="" alt="">
-        <ul>
-          <li>
-            
-          </li>
-        </ul>
-      </div>
-    </header>
+    <my-header></my-header>
       <router-view/>
     <footer>
       <div class="section">
@@ -25,8 +16,15 @@
 </template>
 
 <script>
+import MyHeader from '@/components/header'
 export default {
-  name: 'App'
+  name: 'App',
+  components:{
+    MyHeader
+  },
+  methods:{},
+  mounted(){
+  }
 }
 </script>
 <style>
@@ -34,14 +32,14 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
+  margin: 0 auto;
+  width: 100%;
+  min-width: 1275px;
 }
-header {
-  height: 85px;
-  background: #000;
-}
+
 footer {
+  width: 100%;
   height: 130px;
   background: #828282;
   font-size: 16px;
