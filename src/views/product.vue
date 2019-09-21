@@ -1,33 +1,62 @@
 <template>
-  <div class="hello">
-    产品服务
+  <div class="product">
+    <div class="product-banner">
+      <img src="@/assets/product/product-banner.png" alt="">
+    </div>
+    <my-section :title="product.title" :routerConfig="product.routerConfig">
+      <div class="product-main">
+        <p>为满足客户在备电、发电、换电、储能等方面的需求，公司充分发挥资源与能力优势，向客户提供标准化的能源产品及专业化的能源服务。</p>
+      </div>
+    </my-section>
   </div>
 </template>
+
 <script>
+import MySection from "@/components/section";
 export default {
-  name: 'HelloWorld',
-  data () {
+  components: {
+    MySection
+  },
+  data() {
     return {
-      msg: 'Welcome to Your Vue.js App'
-    }
+      product: {
+        title: "产品与服务",
+        routerConfig: {
+          title: "产品与服务>回收业务",
+          path: "/product"
+        }
+      }
+    };
   }
-}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h1, h2 {
-  font-weight: normal;
+<style>
+.product .content {
+  width: 920px;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+.product-banner {
+  width: 100%;
+  height: 396px;
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
+.product-banner img {
+  display: block;
+  width: 100%;
+  height: 396px;
 }
-a {
-  color: #42b983;
+.product-main {
+  font-size: 18px;
+  color: #828282;
+  padding: 30px 0;
+}
+.product-main p {
+  text-indent: 2em;
+}
+.product-img {
+  margin: 50px auto 90px auto;
+}
+.product-main p {
+  line-height: 24px;
 }
 </style>
