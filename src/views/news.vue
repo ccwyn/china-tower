@@ -1,33 +1,154 @@
 <template>
-  <div class="hello">
-  列表
+  <div class="news">
+     <div class="news-banner">
+      <img src="@/assets/new-detail/new-detail-banner.png" alt="">
+    </div>
+    <my-section
+    :title="detail.title"
+    :routerConfig="detail.routerConfig">
+      <div class="news-main">
+        <section class="news-main__section">
+          <img class="news-main__section-img" src="" alt="">
+          <div class="news-main__section-main">
+            <div class="section-main__top">
+              <a href="javascript:;">中国铁塔公布2019年中期业绩 
+业务发展保持稳健 深化共享创造价值</a>
+              <span>2019-08-07</span>
+            </div>
+            <a  href="javascript:;" class="section-main__content">
+8月7日，中国铁塔在港公布2019年中期业绩。财报显示，中国铁塔业务发展保持稳健。截至2019年6月底，中国铁塔塔类站址数（不含室分）195.4万个，同比增长4.0%；塔类租户数308.2万个，同比增...
+            </a>
+          </div>
+        </section>
+      </div>
+      <div class="pagination">
+    <el-pagination
+      @size-change="handleSizeChange"
+      @current-change="handleCurrentChange"
+      :current-page="currentPage"
+      :page-sizes="[10, 20, 30, 40]"
+      :page-size="pageSize"
+      layout="total, sizes, prev, pager, next, jumper"
+      :total="total">
+    </el-pagination>
+      </div>
+
+    </my-section>
+
   </div>
 </template>
 <script>
+import MySection from "@/components/section";
 export default {
-  name: 'HelloWorld',
+  components:{
+    MySection
+  },
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      detail:{
+        title:'公司新闻',
+        routerConfig:{
+          title: "新闻发布>公司新闻",
+          path: "/news"
+        },
+      },
+    currentPage:0,
+    total:400,
+    pageSize:10
     }
+  },
+  methods:{
+          handleSizeChange(val) {
+        console.log(`每页 ${val} 条`);
+      },
+      handleCurrentChange(val) {
+        console.log(`当前页: ${val}`);
+      }
   }
 }
 </script>
-
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h1, h2 {
-  font-weight: normal;
+
+<style>
+.news .content {
+  width: 920px;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+.news a:hover {
+  color: #d70c19
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
+.news-banner {
+  width: 100%;
+  height: 396px;
 }
-a {
-  color: #42b983;
+.news-banner img {
+  display: block;
+  width: 100%;
+  height: 396px;
+}
+.news-main {
+  font-size: 16px;
+  color: #666666;
+  padding: 30px 0;
+  text-align: center;
+}
+.news-main__section {
+  display: flex;
+  padding-bottom: 36px;
+  border-bottom: 1px solid #e8e8e8;
+}
+.news-main__section-img {
+  display: block;
+  width: 270px;
+  height: 174px;
+  margin-right: 25px;
+  background: #000;
+}
+.news-main__section-main {
+  flex: 1;
+  color: #828282;
+}
+.section-main__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  color: #828282;
+  margin-bottom: 20px;
+}
+.section-main__top a {
+  font-weight: bold;
+  font-size: 20px;
+  color: #333;
+  line-height: 1.4;
+  margin-right: 40px;
+  text-align: left;
+}
+
+.section-main__top span {
+  font-size: 16px;
+  display: flex;
+  width: 150px;
+  margin-bottom: 4px;
+}
+.section-main__content {
+  font-size: 18px;
+  line-height: 26px;
+  text-align: left;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  color: #828282;
+}
+.section-main__content:hover {
+  text-decoration:underline;
+}
+.pagination {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.pagination .el-pager li.active,
+.pagination .el-pager li:hover,
+.pagination .el-pagination button:hover {
+   color: #d70c19;
 }
 </style>

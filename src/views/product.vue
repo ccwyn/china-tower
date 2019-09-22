@@ -52,11 +52,10 @@ export default {
 }
 .product-main p {
   text-indent: 2em;
+   line-height: 24px;
 }
 .product-img {
   margin: 50px auto 90px auto;
 }
-.product-main p {
-  line-height: 24px;
-}
+
 </style>
