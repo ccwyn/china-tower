@@ -195,6 +195,9 @@ export default {
       currentTab: 0
     };
   },
+  mounted(){
+    this.currentTab = this.$route.query.currentTab||0
+  },
   methods: {
     changeTab(e) {
       this.currentTab = e;
