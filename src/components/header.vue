@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <div>
     <div class="content">
       <img src="@/assets/icon-logo.png" class="logo">
       <div class="nav">
@@ -18,12 +18,12 @@
         <span>客服热线：10096</span>
       </div>
     </div>
-  </header>
+  </div>
 </template>
 
 <script>
 export default {
-  name: "header",
+  name: "myheader",
   data() {
     return {
       curName: "index",

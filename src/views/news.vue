@@ -1,71 +1,81 @@
 <template>
   <div class="news">
-     <div class="news-banner">
+    <div class="news-banner">
       <img src="@/assets/new-detail/new-detail-banner.png" alt="">
     </div>
-    <my-section
-    :title="detail.title"
-    :routerConfig="detail.routerConfig">
+    <my-section :title="detail.title" :routerConfig="detail.routerConfig">
       <div class="news-main">
-        <section class="news-main__section">
-          <img class="news-main__section-img" src="" alt="">
+        <section class="news-main__section" @click="goDetail(item)" v-for="(item,index) in list" :key="index">
+          <img class="news-main__section-img" v-if="item.isImage" :src="item.avatarSrc" alt="">
           <div class="news-main__section-main">
             <div class="section-main__top">
-              <a href="javascript:;">中国铁塔公布2019年中期业绩 
-业务发展保持稳健 深化共享创造价值</a>
-              <span>2019-08-07</span>
+              <a href="javascript:;">{{item.title}}</a>
+              <span style="text-align:right">{{item.gtmCreate}}</span>
             </div>
-            <a  href="javascript:;" class="section-main__content">
-8月7日，中国铁塔在港公布2019年中期业绩。财报显示，中国铁塔业务发展保持稳健。截至2019年6月底，中国铁塔塔类站址数（不含室分）195.4万个，同比增长4.0%；塔类租户数308.2万个，同比增...
-            </a>
+            <a href="javascript:;" class="section-main__content">{{item.content}}</a>
           </div>
         </section>
       </div>
       <div class="pagination">
-    <el-pagination
-      @size-change="handleSizeChange"
-      @current-change="handleCurrentChange"
-      :current-page="currentPage"
-      :page-sizes="[10, 20, 30, 40]"
-      :page-size="pageSize"
-      layout="total, sizes, prev, pager, next, jumper"
-      :total="total">
-    </el-pagination>
+        <el-pagination
+          @size-change="handleSizeChange"
+          @current-change="handleCurrentChange"
+          :current-page="currentPage"
+          :page-sizes="[10, 20, 30, 40]"
+          :page-size="pageSize"
+          layout="total, sizes, prev, pager, next, jumper"
+          :total="total"
+        ></el-pagination>
       </div>
-
     </my-section>
-
   </div>
 </template>
 <script>
+import { getOpenList } from "@/http/api";
 import MySection from "@/components/section";
 export default {
-  components:{
+  components: {
     MySection
   },
-  data () {
+  data() {
     return {
-      detail:{
-        title:'公司新闻',
-        routerConfig:{
+      detail: {
+        title: "公司新闻",
+        routerConfig: {
           title: "新闻发布>公司新闻",
           path: "/news"
-        },
+        }
       },
-    currentPage:0,
-    total:400,
-    pageSize:10
-    }
+      currentPage: 0,
+      total: 400,
+      pageSize: 10,
+      list: []
+    };
   },
-  methods:{
-          handleSizeChange(val) {
-        console.log(`每页 ${val} 条`);
-      },
-      handleCurrentChange(val) {
-        console.log(`当前页: ${val}`);
-      }
+  mounted() {
+    this.fetchList();
+  },
+  methods: {
+        goDetail(item){
+      this.$router.push({name:'newDetail',query:{
+        cid:item.cid
+      }})
+    },
+    handleSizeChange(val) {
+      console.log(`每页 ${val} 条`);
+    },
+    handleCurrentChange(val) {
+      console.log(`当前页: ${val}`);
+    },
+    async fetchList() {
+      const { date } = await getOpenList();
+      this.currentPage = date.page;
+      this.total = date.total;
+      this.list = date.rows;
+      console.log(date);
+    }
   }
-}
+};
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 
@@ -74,7 +84,7 @@ export default {
   width: 920px;
 }
 .news a:hover {
-  color: #d70c19
+  color: #d70c19;
 }
 .news-banner {
   width: 100%;
@@ -88,12 +98,13 @@ export default {
 .news-main {
   font-size: 16px;
   color: #666666;
-  padding: 30px 0;
+  padding-bottom: 30px;
   text-align: center;
 }
 .news-main__section {
   display: flex;
   padding-bottom: 36px;
+    padding-top: 30px;
   border-bottom: 1px solid #e8e8e8;
 }
 .news-main__section-img {
@@ -101,7 +112,6 @@ export default {
   width: 270px;
   height: 174px;
   margin-right: 25px;
-  background: #000;
 }
 .news-main__section-main {
   flex: 1;
@@ -119,15 +129,15 @@ export default {
   font-size: 20px;
   color: #333;
   line-height: 1.4;
-  margin-right: 40px;
+  
   text-align: left;
 }
 
 .section-main__top span {
   font-size: 16px;
-  display: flex;
-  width: 150px;
+  width: 120px;
   margin-bottom: 4px;
+  margin-left: 40px;
 }
 .section-main__content {
   font-size: 18px;
@@ -140,7 +150,7 @@ export default {
   color: #828282;
 }
 .section-main__content:hover {
-  text-decoration:underline;
+  text-decoration: underline;
 }
 .pagination {
   text-align: center;
@@ -149,6 +159,6 @@ export default {
 .pagination .el-pager li.active,
 .pagination .el-pager li:hover,
 .pagination .el-pagination button:hover {
-   color: #d70c19;
+  color: #d70c19;
 }
 </style>

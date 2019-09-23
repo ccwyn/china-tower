@@ -33,7 +33,16 @@ module.exports = {
     // https://vue-loader.vuejs.org/en/options.html#cachebusting
     cacheBusting: true,
 
-    cssSourceMap: true
+    cssSourceMap: true,
+    proxyTable: {
+      '/api': {
+        target: 'http://47.100.253.168/', // 设置你调用的接口域名和端口号
+        changeOrigin: true,     // 跨域
+        pathRewrite: {
+          '^/api': '/'          
+        }
+      }
+    },
   },
 
   build: {

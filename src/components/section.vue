@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  name: "section",
+  name: "mysection",
   props:{
     title:{
       type:String,

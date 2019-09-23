@@ -6,22 +6,24 @@
     <my-section
     :title="detail.title"
     :routerConfig="detail.routerConfig">
-      <div class="new-detail-main">
+      <div class="new-detail-main" v-if="detailInfo">
         <h3 class="new-detail__title">
-          中国铁塔公布2019年中期业绩业务发展保持稳健 深化共享创造价值
+          {{detailInfo.title}} 
         </h3>
         <div class="new-detail__des">
           <span>来源：中国铁塔</span>
-          <span>发布时间：中国铁塔</span>
+          <span>发布时间：{{detailInfo.gtmCreate}}</span>
         </div>
-        <div class="new-detail__content">
-          为满足客户在备电、发电、换电、储能等方面的需求，公司充分发挥资源与能力优势，</div>
+        <img v-if="detailInfo.isImage" style="margin-bottom:36px" :src="detailInfo.avatarSrc" alt="">
+        <div class="new-detail__content" v-html="detailInfo.content">
+        </div>
       </div>
     </my-section>
   </div>
 </template>
 <script>
 import MySection from "@/components/section";
+import {getNewsDetail} from '@/http/api'
 export default {
   components:{
     MySection
@@ -35,6 +37,19 @@ export default {
           path: "/news"
         },
       },
+      detailInfo:null
+    }
+  },
+  mounted(){
+    this.fetchNewsDetail()
+  },
+  methods:{
+   async fetchNewsDetail(){
+     let cid = this.$route.query.cid||''
+     const {date} =await getNewsDetail({cid})
+     console.log(date)
+     this.detailInfo =date
+
     }
   }
 }
@@ -84,5 +99,9 @@ export default {
 }
 .new-detail__content {
   text-align: left
+}
+.new-detail__content p{
+  line-height: 1.2
+
 }
 </style>
