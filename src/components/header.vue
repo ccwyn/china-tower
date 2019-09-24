@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="content">
-      <img src="@/assets/icon-logo.png" class="logo">
+      <svg-icon icon-class="iconLogo"  class-name="logo"></svg-icon>
       <div class="nav">
         <div
           class="nav-item"
@@ -14,7 +14,7 @@
         </div>
       </div>
       <div class="nav-right">
-        <img src="@/assets/index/dianhua.png" alt="">
+        <svg-icon icon-class="icon-call"  class-name="icon-call"></svg-icon>
         <span>客服热线：10096</span>
       </div>
     </div>
@@ -82,6 +82,8 @@ header {
   display: inline-block;
   vertical-align: middle;
   margin-right: 40px;
+  width:155px;
+  height:80px;
 }
 .nav {
   display: inline-block;
@@ -132,5 +134,9 @@ header {
   line-height: 30px;
   float: left;
   color: #c4382d;
+}
+.icon-call {
+  width:30px;
+  height:30px;
 }
 </style>

@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import '@/assets/reset.css'
+import './icons'
 import { Pagination ,Carousel ,CarouselItem } from 'element-ui';
 Vue.config.productionTip = false
 Vue.use(Pagination)
