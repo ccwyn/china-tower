@@ -41,7 +41,7 @@
         </a>
         <a class="index-product-item" @click="goProduct(3)">
           <div class="index-product-item__top">
-            <img src="../assets/index/index-product-1.png" alt="">
+            <img src="../assets/index/index-product-4.png" alt="">
             <div class="line">
               <span></span>
             </div>
