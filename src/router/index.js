@@ -8,6 +8,8 @@ import Product from '@/views/product'
 
 Vue.use(Router)
 const RouterModel = new Router({
+  mode:'history',
+  base:'/tietavue',
   routes: [
     {
       path: '/',
