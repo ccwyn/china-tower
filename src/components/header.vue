@@ -102,6 +102,10 @@ header {
   height: 100%;
   text-align: center;
   line-height: 85px;
+  font-weight: bold;
+}
+.nav-item--active a{
+  color: #d62522;
 }
 .nav-item--active::after {
   content: "";
@@ -110,7 +114,7 @@ header {
   position: absolute;
   bottom: 0;
   left: 0;
-  background: #d70c19;
+  background: #d62522;
 }
 .nav-right {
   display: flex;

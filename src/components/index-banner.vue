@@ -14,7 +14,7 @@
         height="372px"
         :interval="5000" arrow="never">
           <el-carousel-item v-for="(item,index) in newsInfo" :key="index">
-            <img style="display:block;width:100%;height:100%" :src="item.avatarSrc" alt="">
+            <img style="display:block;width:100%" :src="item.avatarSrc" alt="">
           </el-carousel-item>
         </el-carousel>
     </div>
@@ -69,6 +69,7 @@ export default {
 }
 .index-main__swiper {
   flex: 1;
+  width: 942;
 }
 .slide-item {
   display: flex;
@@ -92,8 +93,10 @@ export default {
   padding: 0 32px;
   box-sizing: border-box
 }
+
+.slide-item--foot:hover,
 .slide-item:hover {
-  background: #d70c19;
+  background: #d62522;
   color: #fff;
 }
 .slide-item--foot{
@@ -106,7 +109,7 @@ export default {
   text-align: center;
   position: relative;
   box-sizing: border-box;
-  color: #d70c19;
+  color: #d62522;
   background: #fff;
 }
 .slide-item--title{
@@ -120,7 +123,7 @@ export default {
   text-align: center;
   position: relative;
   box-sizing: border-box;
-  background: #d70c19;
+  background: #d62522;
   color: #fff;
 }
 .slide-item--title::after{
@@ -130,8 +133,8 @@ export default {
     display: block;
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
-    border-top: 20px solid #d70c19;
-    border-bottom-color: #d70c19;
+    border-top: 20px solid #d62522;
+    border-bottom-color: #d62522;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -139,12 +142,13 @@ export default {
 }
 .index-main__swiper /deep/ .el-carousel__indicators--horizontal{
   left: 55px;
-  bottom:15px
+  bottom:15px;
+
 }
 .index-main__swiper /deep/ .el-carousel__button{
   height: 5px;
 }
 .index-main__swiper /deep/ .is-active .el-carousel__button{
-  background: #d70c19;
+  background: #d62522;
 }
 </style>

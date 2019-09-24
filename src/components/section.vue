@@ -44,6 +44,7 @@ export default {
   border-bottom: 2px solid #dddddd;
 }
 .section-title  h3{
+  font-weight: bold;
   font-size: 24px;
   height: 100%;
   line-height: 60px;
@@ -58,12 +59,19 @@ export default {
   position: absolute;
   bottom: -2px;
   left: 0;
-  background: #d70c19;
+  background: #d62522;
 }
 .section-title a{
   color: #8f8f8f;
-  font-size: 14px
+  font-weight: bold;
+  font-size: 14px;
+
 }
+.section-title a:hover{
+
+  color: #d62522;
+}
+
 .index-main {
   display: flex;
   height: 432px;

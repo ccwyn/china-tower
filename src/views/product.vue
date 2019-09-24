@@ -21,7 +21,7 @@
         </div>
         <div class="product-tab-main" v-if="currentTab === 0">
           <div class="tab-item">
-            <div class="tab-item__title" style="color:#c1974d;">备电业务</div>
+            <div class="tab-item__title">备电业务</div>
             <p
               class="tab-item__text"
             >基于成熟的通信基站电力保障方案，利用锂电池和智能监控系统等产品，为客户提供不间断供电综合解决方案。</p>
@@ -31,9 +31,9 @@
             <div class="tab-item__main">
               <img src="../assets/product/beidian.png" alt="">
               <p class="tab-text-wrap">
-                <span class="tab-text-wrap__item">锂电池组</span>
-                <span class="tab-text-wrap__item">监控单元</span>
-                <span class="tab-text-wrap__item">运营平台</span>
+                <span class="tab-text-wrap__item mbd">锂电池组</span>
+                <span class="tab-text-wrap__item mbd">监控单元</span>
+                <span class="tab-text-wrap__item mbd">运营平台</span>
               </p>
             </div>
           </div>
@@ -51,7 +51,7 @@
         </div>
         <div class="product-tab-main" v-if="currentTab === 1">
           <div class="tab-item">
-            <div class="tab-item__title" style="color:#c1974d;">发电业务</div>
+            <div class="tab-item__title">发电业务</div>
             <p
               class="tab-item__text"
             >以便携式锂电池组为载体，快速响应客户的紧急用电需求，主要面向金融网点、商超餐饮、电动汽车等群体，提供专业化、规范化、快捷化的静音发电和道路应急充电等服务。</p>
@@ -61,9 +61,9 @@
             <div class="tab-item__main">
               <img src="../assets/product/icon-fadian.png" alt="">
               <p class="tab-text-wrap">
-                <span class="tab-text-wrap__item">便携式发电设备</span>
-                <span class="tab-text-wrap__item">小型移动发电车</span>
-                <span class="tab-text-wrap__item">大型移动发电车</span>
+                <span class="tab-text-wrap__item mfd">便携式发电设备</span>
+                <span class="tab-text-wrap__item mfd">小型移动发电车</span>
+                <span class="tab-text-wrap__item mfd">大型移动发电车</span>
               </p>
             </div>
           </div>
@@ -81,7 +81,7 @@
         </div>
         <div class="product-tab-main" v-if="currentTab === 2">
           <div class="tab-item">
-            <div class="tab-item__title" style="color:#c1974d;">换电业务</div>
+            <div class="tab-item__title">换电业务</div>
             <p
               class="tab-item__text"
             >　　以标准锂电池为载体，面向物流及外卖骑手提供低速电动车动力电池的换电服务。</p>
@@ -91,9 +91,9 @@
             <div class="tab-item__main">
               <img src="../assets/product/huandian.png" alt="">
               <p class="tab-text-wrap">
-                <span class="tab-text-wrap__item">智能锂电池</span>
-                <span class="tab-text-wrap__item">智能换电池</span>
-                <span class="tab-text-wrap__item">客户APP</span>
+                <span class="tab-text-wrap__item mhd">智能锂电池</span>
+                <span class="tab-text-wrap__item mhd">智能换电池</span>
+                <span class="tab-text-wrap__item mhd">客户APP</span>
               </p>
             </div>
           </div>
@@ -112,7 +112,7 @@
         </div>
         <div class="product-tab-main" v-if="currentTab === 3">
           <div class="tab-item">
-            <div class="tab-item__title" style="color:#c1974d;">售电业务</div>
+            <div class="tab-item__title">售电业务</div>
             <p
               class="tab-item__text"
             >为用户提供储能系统，在电价谷值时段电池储存电能，电价峰值时段停止使用市电并通过电池向客户供电。建设光伏、风力发电新能源系统，利用太阳能和风力资源，向客户提供新能源系统集成或售电服务。</p>
@@ -122,10 +122,10 @@
             <div class="tab-item__main">
               <img src="../assets/product/shoudian.png" alt="">
               <p class="tab-text-wrap">
-                <span class="tab-text-wrap__item">储能集装箱</span>
-                <span class="tab-text-wrap__item">光伏控制器</span>
-                <span class="tab-text-wrap__item">储能电源</span>
-                <span class="tab-text-wrap__item">储能用锂电池组</span>
+                <span class="tab-text-wrap__item msd">储能集装箱</span>
+                <span class="tab-text-wrap__item msd">光伏控制器</span>
+                <span class="tab-text-wrap__item msd">储能电源</span>
+                <span class="tab-text-wrap__item msd">储能用锂电池组</span>
               </p>
             </div>
           </div>
@@ -143,7 +143,7 @@
         </div>
         <div class="product-tab-main" v-if="currentTab === 4">
           <div class="tab-item">
-            <div class="tab-item__title" style="color:#c1974d;">回收业务</div>
+            <div class="tab-item__title">回收业务</div>
             <p
               class="tab-item__text"
             >　　通过建设覆盖全国的动力电池回收体系，开展动力电池的回收与梯次利用工作，对动力电池进行全生 命周期溯源管理，成为国家循环经济的主力军。</p>
@@ -152,9 +152,7 @@
             <div class="tab-item__title">回收流程</div>
             <div class="tab-item__main">
               <p class="tab-item__text">按次模式：按次为客户提供充发电服务，收取出车费、发电费等。</p>
-
               <img src="../assets/product/huishou.png" alt="">
-
             </div>
           </div>
           <div class="tab-item">
@@ -164,7 +162,7 @@
           </div>
           <div class="tab-item">
             <div class="tab-item__title">合作伙伴</div>
-            <div style="margin:50px 0">
+            <div style="margin:50px 0;width:920px;">
               <img  style="margin:0 auto;display:block;" src="../assets/product/hezuo-title.png" alt="">
               <p class="tab-item__text" style="text-align:center;margin-top:24px">按次模式：按次为客户提供充发电服务，收取出车费、发电费等。</p>
             </div>
@@ -196,7 +194,8 @@ export default {
     };
   },
   mounted(){
-    this.currentTab = this.$route.query.currentTab||0
+    this.currentTab = parseInt(this.$route.query.currentTab || 0)
+    console.log(this.currentTab)
   },
   methods: {
     changeTab(e) {
@@ -264,7 +263,7 @@ export default {
   color: #828282;
 }
 .tab-item__title {
-  border-left: 3px solid #d70c19;
+  border-left: 3px solid #d62522;
   padding-left: 8px;
   box-sizing: border-box;
   font-weight: bold;
@@ -279,15 +278,19 @@ export default {
   margin: 10px;
 }
 .tab-text-wrap__item {
-  padding-right: 67px;
-  color: #d70c19;
+  color: #d62522;
 }
 .tab-item__text .i {
   display: inline-block;
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #d70c19;
+  background: #d62522;
   margin-right: 6px;
 }
+.mbd { padding: 0 130px 0 58px;}
+.mfd {  padding-right: 67px;}
+.mhd {margin-right: 67px;}
+.msd {padding: 0 35px 0 25px;}
+
 </style>

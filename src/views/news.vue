@@ -84,7 +84,7 @@ export default {
   width: 920px;
 }
 .news a:hover {
-  color: #d70c19;
+  color: #d62522;
 }
 .news-banner {
   width: 100%;
@@ -159,6 +159,6 @@ export default {
 .pagination .el-pager li.active,
 .pagination .el-pager li:hover,
 .pagination .el-pagination button:hover {
-  color: #d70c19;
+  color: #d62522;
 }
 </style>
