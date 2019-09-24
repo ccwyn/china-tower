@@ -13,7 +13,7 @@
         :loop="true"
         height="372px"
         :interval="5000" arrow="never">
-          <el-carousel-item v-for="item in newsInfo" :key="item">
+          <el-carousel-item v-for="(item,index) in newsInfo" :key="index">
             <img style="display:block;width:100%;height:100%" :src="item.avatarSrc" alt="">
           </el-carousel-item>
         </el-carousel>

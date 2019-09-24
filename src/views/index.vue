@@ -66,7 +66,7 @@
       </div>
     </my-section>
     <my-section :title="about.title" :routerConfig="about.routerConfig">
-      <div class="index-about">
+      <div class="index-about" v-if="aboutInfo">
         <div class="index-about__wrap">
           <div class="video">
             <video width="455" height="255" controls preload="auto" poster="@/assets/icon-logo.png">

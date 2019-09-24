@@ -4,8 +4,7 @@ import axios from 'axios';
 
 axios.defaults.withCredentials=true;
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
-axios.defaults.baseURL= process.env.NODE_ENV === 'development'?'/api':'',
-console.log(axios.defaults,process.env.API_ROOT)
+axios.defaults.baseURL= process.env.NODE_ENV === 'development'?`/api`:process.env.API_ROOT,
 // http request 拦截器
 axios.interceptors.request.use(
   config => {
