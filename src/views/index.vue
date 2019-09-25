@@ -127,7 +127,7 @@
       <div class="index-about" v-if="aboutInfo">
         <div class="index-about__wrap">
           <div class="video">
-            <video width="455" height="255" controls preload="auto" poster="@/assets/icon-logo.png">
+            <video width="455" height="255" controls preload="auto" :poster="aboutInfo.poster">
               <source :src="aboutInfo.url" type="video/mp4">
             </video>
           </div>

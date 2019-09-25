@@ -15,7 +15,8 @@
             v-for="(item, index) in tabs"
             :key="index"
           >
-            <img src="../assets/product/tab-arrow.png" style="margin-right:4px;" alt="">
+            <img src="../assets/product/tab-active-arrow.png" v-if="currentTab===index" style="margin-right:4px;" alt="">
+            <img src="../assets/product/tab-arrow.png" v-else style="margin-right:4px;" alt="">
             {{item}}
           </a>
         </div>
@@ -152,7 +153,7 @@
             <div class="tab-item__title">回收流程</div>
             <div class="tab-item__main">
               <p class="tab-item__text">按次模式：按次为客户提供充发电服务，收取出车费、发电费等。</p>
-              <img src="../assets/product/huishou.png" alt="">
+              <img class="huishou-img" src="../assets/product/huishou.png" alt="">
             </div>
           </div>
           <div class="tab-item">
@@ -163,10 +164,11 @@
           <div class="tab-item">
             <div class="tab-item__title">合作伙伴</div>
             <div style="margin:50px 0;width:920px;">
-              <img  style="margin:0 auto;display:block;" src="../assets/product/hezuo-title.png" alt="">
-              <p class="tab-item__text" style="text-align:center;margin-top:24px">按次模式：按次为客户提供充发电服务，收取出车费、发电费等。</p>
+              <!-- <img  class="hezuo-title-img" style="margin:0 auto;display:block;" src="../assets/product/hezuo-title.png" alt=""> -->
+                    <svg-icon icon-class="hezuo-title"  class-name="hezuo-title-img"></svg-icon>
+              <p class="tab-item__text" style="text-align:center;margin-top:24px;">按次模式：按次为客户提供充发电服务，收取出车费、发电费等。</p>
             </div>
-            <img src="../assets/product/hezuo.png" alt="">
+            <img class="hezuo-img" src="../assets/product/hezuo.png" alt="">
           </div>
         </div>
       </div>
@@ -251,7 +253,7 @@ export default {
 }
 .tab-active {
   background: url("../assets/product/tab-active.png") no-repeat left;
-  background-size: 100%;
+  background-size: 100% 100%;
   color: #fff;
 }
 .tab-item {
@@ -292,5 +294,23 @@ export default {
 .mfd {  padding-right: 67px;}
 .mhd {margin-right: 67px;}
 .msd {padding: 0 35px 0 25px;}
+.huishou-img {
+  display: block;
+  margin: 0 auto;
+  width: 734px;
+  height: 141px;
+}
+.hezuo-img {
+  display: block;
+  margin: 0 auto;
+  width: 919px;
+  height: 251px;
+}
+.hezuo-title-img {
+    display: block;
+  margin: 0 auto;
+  width: 260px;
+  height: 29px;
+}
 
 </style>
