@@ -30,7 +30,7 @@
           <div class="tab-item">
             <div class="tab-item__title">产品介绍</div>
             <div class="tab-item__main">
-              <img src="../assets/product/beidian.png" alt="">
+              <img src="../assets/product/beidian.png" class="beidian-img" alt="">
               <p class="tab-text-wrap">
                 <span class="tab-text-wrap__item mbd">锂电池组</span>
                 <span class="tab-text-wrap__item mbd">监控单元</span>
@@ -60,7 +60,7 @@
           <div class="tab-item">
             <div class="tab-item__title">产品介绍</div>
             <div class="tab-item__main">
-              <img src="../assets/product/icon-fadian.png" alt="">
+              <img src="../assets/product/fadian.png"  class="fadian-img" alt="">
               <p class="tab-text-wrap">
                 <span class="tab-text-wrap__item mfd">便携式发电设备</span>
                 <span class="tab-text-wrap__item mfd">小型移动发电车</span>
@@ -90,7 +90,7 @@
           <div class="tab-item">
             <div class="tab-item__title">产品介绍</div>
             <div class="tab-item__main">
-              <img src="../assets/product/huandian.png" alt="">
+              <img src="../assets/product/huandian.png"  class="huandian-img" alt="">
               <p class="tab-text-wrap">
                 <span class="tab-text-wrap__item mhd">智能锂电池</span>
                 <span class="tab-text-wrap__item mhd">智能换电池</span>
@@ -121,7 +121,7 @@
           <div class="tab-item">
             <div class="tab-item__title">产品介绍</div>
             <div class="tab-item__main">
-              <img src="../assets/product/shoudian.png" alt="">
+              <img src="../assets/product/shoudian.png"  class="shoudian-img" alt="">
               <p class="tab-text-wrap">
                 <span class="tab-text-wrap__item msd">储能集装箱</span>
                 <span class="tab-text-wrap__item msd">光伏控制器</span>
@@ -241,9 +241,10 @@ export default {
   width: 762px;
   height: 41px;
   background: url("../assets/product/tab-bg.png") no-repeat center;
-  background-size: 100%;
+  background-size: 100% 100%;
   display: flex;
   margin-top: 42px;
+  overflow: hidden;
 }
 .product-tab__item {
   flex: 1;
@@ -307,10 +308,21 @@ export default {
   height: 251px;
 }
 .hezuo-title-img {
-    display: block;
+  display: block;
   margin: 0 auto;
   width: 260px;
   height: 29px;
 }
-
+.beidian-img {
+  width: 656px;
+}
+.fadian-img {
+  width: 491px;
+}
+.shoudian-img {
+  width: 524px;
+}
+.huandian-img {
+  width: 346px;
+}
 </style>
