@@ -113,6 +113,10 @@ export default {
   height: 174px;
   margin-right: 25px;
 }
+.news-main__section-img:hover{
+  transform: scale(1.1);
+  transition: all 0.3s ease 0s;
+}
 .news-main__section-main {
   flex: 1;
   color: #828282;
@@ -161,4 +165,5 @@ export default {
 .pagination .el-pagination button:hover {
   color: #d62522;
 }
+
 </style>

@@ -1,46 +1,45 @@
 <template>
-<div class="index-banner">
-  <div class="content index-main">
-    <div class="index-main__slide">
-      <div class="slide-item--title">公司新闻</div>
-      <div style="height:272px">
-        <a class="slide-item" @click="goDetail(item)" v-for="(item,index) in newsInfo" :key="index">{{item.title}}</a>
+  <div class="index-banner">
+    <div class="content index-main">
+      <div class="index-main__slide">
+        <div class="slide-item--title">公司新闻</div>
+        <div style="height:272px">
+          <div class="slide-item">
+            <a @click="goDetail(item)" v-for="(item,index) in newsInfo" :key="index">{{item.title}}</a>
+          </div>
+        </div>
+        <a class="slide-item--foot" @click="goList">查看全部</a>
       </div>
-      <a class="slide-item--foot" @click="goList">查看全部</a>
-    </div>
-    <div class="index-main__swiper">
-        <el-carousel 
-        :loop="true"
-        height="372px"
-        :interval="5000" arrow="never">
+      <div class="index-main__swiper">
+        <el-carousel :loop="true" height="372px" :interval="5000" arrow="never">
           <el-carousel-item v-for="(item,index) in newsInfo" :key="index">
-            <img style="display:block;width:100%" :src="item.avatarSrc" alt="">
+            <img  @click="goDetail(item)" style="display:block;width:100%" :src="item.avatarSrc" alt="">
           </el-carousel-item>
         </el-carousel>
+      </div>
     </div>
-
   </div>
-</div>
 </template>
 
 <script>
 export default {
   name: "indexBanner",
-  props:['newsInfo'],
+  props: ["newsInfo"],
 
   data() {
-    return {
-
-    };
+    return {};
   },
-  methods:{
-    goDetail(item){
-      this.$router.push({name:'newDetail',query:{
-        cid:item.cid
-      }})
+  methods: {
+    goDetail(item) {
+      this.$router.push({
+        name: "newDetail",
+        query: {
+          cid: item.cid
+        }
+      });
     },
-    goList(item){
-      this.$router.push({name:'news'})
+    goList(item) {
+      this.$router.push({ name: "news" });
     }
   }
 };
@@ -48,12 +47,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.index-banner{
+.index-banner {
   height: 432px;
   background: #f4f4f4;
   box-sizing: border-box;
   padding: 30px 0;
-
 }
 .index-main {
   display: flex;
@@ -77,29 +75,30 @@ export default {
   align-items: center;
   height: 68px;
   font-size: 14px;
+  line-height: 1.4;
   color: #505050;
-  padding: 15px 0;
-  text-align: center;
+  padding: 15px 10px;
+  text-align: left;
   border-bottom: 1px solid #f7f7f7;
   box-sizing: border-box;
   background: #fff;
-
 }
-.slide-item p {
+.slide-item a {
+  height: 40px;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
-  padding: 0 32px;
-  box-sizing: border-box
+  box-sizing: border-box;
 }
 
 .slide-item--foot:hover,
-.slide-item:hover {
+.slide-item:hover,
+.slide-item:hover a {
   background: #d62522;
   color: #fff;
 }
-.slide-item--foot{
+.slide-item--foot {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -112,12 +111,13 @@ export default {
   color: #d62522;
   background: #fff;
 }
-.slide-item--title{
+.slide-item--title {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 55px;
-  font-size: 14px;
+  font-weight: bold;
+  font-size: 18px;
   color: #505050;
   padding: 15px 0;
   text-align: center;
@@ -126,29 +126,28 @@ export default {
   background: #d62522;
   color: #fff;
 }
-.slide-item--title::after{
-    content: '';
-    height: 0;
-    width: 0;
-    display: block;
-    border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
-    border-top: 20px solid #d62522;
-    border-bottom-color: #d62522;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 48px;
+.slide-item--title::after {
+  content: "";
+  height: 0;
+  width: 0;
+  display: block;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid #d62522;
+  border-bottom-color: #d62522;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 48px;
 }
-.index-main__swiper /deep/ .el-carousel__indicators--horizontal{
+.index-main__swiper /deep/ .el-carousel__indicators--horizontal {
   left: 55px;
-  bottom:15px;
-
+  bottom: 15px;
 }
-.index-main__swiper /deep/ .el-carousel__button{
+.index-main__swiper /deep/ .el-carousel__button {
   height: 5px;
 }
-.index-main__swiper /deep/ .is-active .el-carousel__button{
+.index-main__swiper /deep/ .is-active .el-carousel__button {
   background: #d62522;
 }
 </style>
