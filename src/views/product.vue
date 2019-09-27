@@ -161,15 +161,14 @@
             <p class="tab-item__text"><i class="i"></i>2018年1月4日，中国汽车动力电池产业联盟回收利用分会在京成立，大会选举中国铁塔股份有限公司为回收利用分会理事长单位。</p>
             <p class="tab-item__text"><i class="i"></i>2018年10月31日，中国铁塔在京主持召开新能源汽车动力电池回收利用体系建设论坛。</p>
           </div>
-          <div class="tab-item">
+          <!-- <div class="tab-item">
             <div class="tab-item__title">合作伙伴</div>
             <div style="margin:50px 0;width:920px;">
-              <!-- <img  class="hezuo-title-img" style="margin:0 auto;display:block;" src="../assets/product/hezuo-title.png" alt=""> -->
                     <svg-icon icon-class="hezuo-title"  class-name="hezuo-title-img"></svg-icon>
               <p class="tab-item__text" style="text-align:center;margin-top:24px;">按次模式：按次为客户提供充发电服务，收取出车费、发电费等。</p>
             </div>
             <img class="hezuo-img" src="../assets/product/hezuo.png" alt="">
-          </div>
+          </div> -->
         </div>
       </div>
     </my-section>

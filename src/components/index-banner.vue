@@ -4,9 +4,11 @@
       <div class="index-main__slide">
         <div class="slide-item--title">公司新闻</div>
         <div style="height:272px">
-          <div class="slide-item">
-            <a @click="goDetail(item)" v-for="(item,index) in newsInfo" :key="index">{{item.title}}</a>
+          <template v-for="(item,index) in newsInfo">
+          <div class="slide-item"  @click="goDetail(item)" :key="index">
+            <a>{{item.title}}</a>
           </div>
+          </template>
         </div>
         <a class="slide-item--foot" @click="goList">查看全部</a>
       </div>

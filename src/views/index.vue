@@ -134,7 +134,7 @@
           <div class="index-about__content">
             <!-- <img src="@/assets/icon-logo.png" class="index-about__logo"> -->
             <svg-icon icon-class="video-logo"  class-name="index-about__logo"></svg-icon>
-            <p>{{aboutInfo.desc}}</p>
+            <p v-html="aboutInfo.desc" ></p>
           </div>
         </div>
       </div>
@@ -183,6 +183,8 @@ export default {
     },
     async fetchAbout() {
       const { date } = await getAbout();
+      console.log(date.desc)
+      date.desc =   date.desc.replace(/\s\s\s\s/g,'<br>')
       this.aboutInfo = date;
     },
     goProduct(currentTab){

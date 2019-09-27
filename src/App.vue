@@ -4,7 +4,7 @@
       <router-view/>
     <footer>
       <div class="section">
-        <p>北京市海淀区阜成路73号19楼</p>
+        <p>北京市海淀区阜成路73号裕惠大厦A座8层</p>
         <p>邮箱：news@chinatowercom.cn</p>
       </div>
       <div class="section">
