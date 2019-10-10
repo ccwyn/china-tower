@@ -2,7 +2,7 @@
   <div id="app">
     <my-header></my-header>
       <router-view/>
-    <footer>
+    <!-- <footer>
       <div class="section">
         <p>北京市海淀区阜成路73号裕惠大厦A座8层</p>
         <p>邮箱：news@chinatowercom.cn</p>
@@ -11,6 +11,16 @@
         <p>Copyright©2018中国铁塔股份有限公司 版权所有</p>
       </div>
       <div class="section" style="margin-top:20px;"><p>京ICP备14039488号</p></div>
+    </footer> -->
+    <footer>
+      <div class="section"  style="margin-top:40px">
+        <p>北京市海淀区阜成路73号裕惠大厦A座8层</p>
+
+      </div>
+      <div class="section">
+
+        <p>邮箱：news@chinatowercom.cn</p>
+      </div>
     </footer>
   </div>
 </template>
