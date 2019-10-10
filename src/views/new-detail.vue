@@ -11,7 +11,7 @@
           {{detailInfo.title}} 
         </h3>
         <div class="new-detail__des">
-          <span>来源：中国铁塔</span>
+          <span>来源：铁塔能源</span>
           <span>发布时间：{{detailInfo.gtmCreate}}</span>
         </div>
         <img v-if="detailInfo.isImage" style="margin-bottom:36px" :src="detailInfo.avatarSrc" alt="">

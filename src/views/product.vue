@@ -146,8 +146,7 @@
           <div class="tab-item">
             <div class="tab-item__title">回收业务</div>
             <p
-              class="tab-item__text"
-            >　　通过建设覆盖全国的动力电池回收体系，开展动力电池的回收与梯次利用工作，对动力电池进行全生 命周期溯源管理，成为国家循环经济的主力军。</p>
+              class="tab-item__text">通过建设覆盖全国的动力电池回收体系，开展动力电池的回收与梯次利用工作，对动力电池进行全生 命周期溯源管理，成为国家循环经济的主力军。</p>
           </div>
           <div class="tab-item">
             <div class="tab-item__title">回收流程</div>
