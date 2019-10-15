@@ -183,7 +183,7 @@ export default {
     },
     async fetchAbout() {
       const { date } = await getAbout();
-      console.log(date.desc)
+
       date.desc =   date.desc.replace(/\s\s\s\s/g,'<br>')
       this.aboutInfo = date;
     },

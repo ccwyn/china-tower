@@ -195,7 +195,6 @@ export default {
   },
   mounted(){
     this.currentTab = parseInt(this.$route.query.currentTab || 0)
-    console.log(this.currentTab)
   },
   methods: {
     changeTab(e) {

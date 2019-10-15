@@ -15,7 +15,7 @@
       <div class="index-main__swiper">
         <el-carousel :loop="true" height="372px" :interval="5000" arrow="never">
           <el-carousel-item v-for="(item,index) in newsInfo" :key="index">
-            <img  @click="goDetail(item)" style="display:block;width:100%" :src="item.avatarSrc" alt="">
+            <img  @click="goDetail(item)" style="display:block;width:100%;height:372px;" :src="item.avatarSrc" alt="">
           </el-carousel-item>
         </el-carousel>
       </div>

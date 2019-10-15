@@ -60,7 +60,7 @@ export default {
   },
   methods: {
     changeRoute() {
-      console.log(this.$route);
+
       this.curName = this.$route.name;
     }
   }

@@ -47,7 +47,7 @@ export default {
    async fetchNewsDetail(){
      let cid = this.$route.query.cid||''
      const {date} =await getNewsDetail({cid})
-     console.log(date)
+
      this.detailInfo =date
 
     }
